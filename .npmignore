@@ -1,0 +1,4 @@
+scripts/
+lib/
+.merlin
+.gitignore
