@@ -13,7 +13,7 @@ Feel free to create an issue or PR if you find anything missing.
 ## Installation
 
 ```
-yarn add bs-material-ui-icons
+yarn add @mscharley/bs-material-ui-icons
 yarn add @material-ui/core
 yarn add @material-ui/icons
 ```
