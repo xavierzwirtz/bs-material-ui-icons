@@ -10,7 +10,7 @@
     "clean": "bsb -clean-world",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepack": "yarn run clean",
-    "generate-bindings": "rm src/*.re && node ./scripts/generate-bindings.js",
+    "generate-bindings": "node ./scripts/generate-bindings.js",
     "format:js": "prettier --write ./*.{js,json,md} ./**/*.{js,json,md}",
     "format:reason": "bsrefmt --in-place src/*.re",
     "format": "yarn format:js && yarn format:reason"
