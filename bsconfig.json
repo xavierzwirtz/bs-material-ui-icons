@@ -1,5 +1,5 @@
 {
-  "name": "bs-material-ui-icons",
+  "name": "@mscharley/bs-material-ui-icons",
   "bsc-flags": ["-bs-super-errors"],
   "sources": ["src"],
   "bs-dependencies": ["reason-react"],
