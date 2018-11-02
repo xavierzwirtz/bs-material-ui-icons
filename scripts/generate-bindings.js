@@ -5,9 +5,15 @@ const os = require('os');
 const contents = Object.keys(icons)
   .map(
     icon => `module ${icon} = {
-  [@bs.module "@material-ui/icons/${icon}"] external reactClass : ReasonReact.reactClass = "default";
-  let make = (children) =>
-    ReasonReact.wrapJsForReason(~reactClass, ~props=Js.Obj.empty(), children);
+  [@bs.module "@material-ui/icons/${icon}"]
+  external reactClass : ReasonReact.reactClass = "default";
+  [@bs.obj] external makeProps: (~className: string=?, unit) => _ = "";
+  let make = (~className: option(string)=?, children) =>
+    ReasonReact.wrapJsForReason(
+      ~reactClass,
+      ~props=makeProps(~className?, ()),
+      children,
+    );
 };`,
   )
   .join(`${os.EOL}${os.EOL}`);
