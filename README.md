@@ -1,6 +1,6 @@
 # Reason bindings for Material-UI-Icons
 
-[![npm](https://img.shields.io/npm/v/bs-material-ui-icons.svg)](https://www.npmjs.com/package/bs-material-ui-icons)
+[![npm](https://img.shields.io/npm/v/@mscharley/bs-material-ui-icons.svg)](https://www.npmjs.com/package/@mscharley/bs-material-ui-icons)
 
 [Reason](https://reasonml.github.io/) bindings for [material-ui-icons](https://github.com/callemall/material-ui).
 
@@ -18,12 +18,12 @@ yarn add @material-ui/core
 yarn add @material-ui/icons
 ```
 
-Then add `bs-material-ui-icons` to `bs-dev-dependencies` in your `bsconfig.json`:
+Then add `@mscharley/bs-material-ui-icons` to `bs-dependencies` in your `bsconfig.json`:
 
 ```json
 {
   ...
-  "bs-dev-dependencies": ["bs-material-ui-icons"]
+  "bs-dependencies": ["@mscharley/bs-material-ui-icons"]
 }
 ```
 
