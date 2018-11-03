@@ -9,6 +9,7 @@
 
 # production
 /build
+/src/*.bs.js
 
 # bucklescript
 /lib

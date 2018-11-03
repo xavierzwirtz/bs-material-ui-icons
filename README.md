@@ -34,6 +34,6 @@ let component = ReasonReact.statelessComponent("Example");
 
 let make = (_children) => {
   ...component,
-  render: (_self) => <MaterialUIIcons.Delete>
+  render: (_self) => <MscharleyBsMaterialUiIcons.Delete.Filled />
 };
 ```

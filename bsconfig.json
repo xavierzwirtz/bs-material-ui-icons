@@ -1,5 +1,6 @@
 {
   "name": "@mscharley/bs-material-ui-icons",
+  "namespace": true,
   "bsc-flags": ["-bs-super-errors"],
   "sources": ["src"],
   "suffix": ".bs.js",
