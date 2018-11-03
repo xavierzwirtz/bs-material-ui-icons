@@ -1,6 +1,6 @@
 {
   "name": "@mscharley/bs-material-ui-icons",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Reason bindings for material-ui-icons",
   "main": "lib/js/src/MaterialUI.js",
   "scripts": {

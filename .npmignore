@@ -2,3 +2,4 @@ scripts/
 lib/
 .merlin
 .gitignore
+src/*.bs.js
