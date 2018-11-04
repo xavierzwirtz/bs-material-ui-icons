@@ -6,7 +6,7 @@
 
 ## Status
 
-🚧 This is a WIP, not everything is supported yet. 🚧
+🚧 This is a WIP, not everything is supported yet but we're getting close. 🚧
 
 Feel free to create an issue or PR if you find anything missing.
 
@@ -38,10 +38,26 @@ let make = (_children) => {
 };
 ```
 
+[You can find a list of available icons here.](https://material.io/tools/icons/)
+
+## Help! The icon I want to use isn't available
+
+Maybe this library hasn't been updated yet to include the new icon. No problems! You can easily use the same tooling we do to include any new icons you want with only a few lines of code.
+
+```reason
+module FancyNewIcon = {
+  [@bs.module "@material-ui/icons/FancyNewIcon"]
+  external reactClass: ReasonReact.reactClass = "default";
+  let make = MscharleyBsMaterialUiIcons.makeIcon(~reactClass);
+};
+```
+
+Please also let us know that we're missing something in an issue! We'll get things updated as soon as possible.
+
 ## Design decisions
 
 ### AKA. Why does this module take so long to build?
 
-There are an awful lot of icons in available in `@material-ui/icons`. As of writing, roughly 5000 of them. Initially, this project exported all of these icons from one module file. This was very fast to build! However due to interactions with the way the `bsb` builds files and the way it writes imports this led to very big deployment packages, even with tree shaking. Using a single icon caused builds to jump up 3MB because all the icons were always being included.
+There are an awful lot of icons available in `@material-ui/icons`; as of writing, around 5000 of them. Initially, this project exported all of these icons from one module file. This was very fast to build! However due to interactions with the way the `bsb` builds files and the way it writes imports this led to very big deployment packages, even with tree shaking. Using a single icon caused builds to increase in size by 3MB (~7x in my small project!) because all the icons were always being included.
 
-This module now exports each group of icons into it's own file. This leads to a slightly different usage pattern to ReactJS, namely `<Delete.Filled />` instead of `<DeleteFilled />`. This isn't that big a deal, really. It also lets packagers only include the icons you're using. Unfortunately, it means that the BSB build is a little bit longer.
+This module now exports each group of icons into it's own file. This leads to a slightly different usage pattern to ReactJS, namely `<Delete.Filled />` instead of `<Delete />` or `<Delete.Outlined />` instead of `<DeleteOutlined />`. This isn't that big a deal, really. It also lets packagers only include the icons you're using. Unfortunately, it means that the BSB build is a little bit longer.
