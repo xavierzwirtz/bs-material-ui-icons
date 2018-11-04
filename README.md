@@ -38,7 +38,7 @@ let make = (_children) => {
 };
 ```
 
-[You can find a list of available icons here.](https://material.io/tools/icons/)
+[You can find a list of available icons here.](https://material.io/tools/icons/) The icons are exposed as `<IconName.Theme />` from this library, which is slightly different to ReactJS which uses `<IconNameTheme />` or `<IconName />` for the filled theme.
 
 ## Help! The icon I want to use isn't available
 
