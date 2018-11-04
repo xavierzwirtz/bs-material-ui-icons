@@ -40,7 +40,7 @@ let makeIcon =
       ~nativeColor: option(string)=?,
       ~titleAccess: option(string)=?,
       ~viewBox: option(string)=?,
-      children: unit,
+      children: array(ReasonReact.reactElement),
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass,

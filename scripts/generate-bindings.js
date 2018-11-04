@@ -25,7 +25,7 @@ Object.keys(groupedIcons).map(icon => {
     (c, [importName, moduleName]) => `${c}
 module ${moduleName} = {
   [@bs.module "@material-ui/icons/${importName}"]
-  external reactClass : ReasonReact.reactClass = "default";
+  external reactClass: ReasonReact.reactClass = "default";
   let make = makeIcon(~reactClass);
 };
 `,
