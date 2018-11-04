@@ -7,17 +7,13 @@ module Filled = {
 };
 
 module Outlined = {
-  [@bs.module
-    "@material-ui/icons/SignalCellularConnectedNoInternet4BarOutlined"
-  ]
+  [@bs.module "@material-ui/icons/SignalCellularConnectedNoInternet4BarOutlined"]
   external reactClass: ReasonReact.reactClass = "default";
   let make = makeIcon(~reactClass);
 };
 
 module Rounded = {
-  [@bs.module
-    "@material-ui/icons/SignalCellularConnectedNoInternet4BarRounded"
-  ]
+  [@bs.module "@material-ui/icons/SignalCellularConnectedNoInternet4BarRounded"]
   external reactClass: ReasonReact.reactClass = "default";
   let make = makeIcon(~reactClass);
 };
@@ -29,9 +25,7 @@ module Sharp = {
 };
 
 module TwoTone = {
-  [@bs.module
-    "@material-ui/icons/SignalCellularConnectedNoInternet4BarTwoTone"
-  ]
+  [@bs.module "@material-ui/icons/SignalCellularConnectedNoInternet4BarTwoTone"]
   external reactClass: ReasonReact.reactClass = "default";
   let make = makeIcon(~reactClass);
 };

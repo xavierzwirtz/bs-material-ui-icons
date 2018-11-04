@@ -1,3 +1,5 @@
+open Belt.Option;
+
 [@bs.deriving jsConverter]
 type color = [
   | [@bs.as "default"] `Default
@@ -21,8 +23,8 @@ type fontSize = [
 external makeProps:
   (
     ~className: string=?,
-    ~color: color=?,
-    ~fontSize: fontSize=?,
+    ~color: string=?,
+    ~fontSize: string=?,
     ~nativeColor: string=?,
     ~titleAccess: string=?,
     ~viewBox: string=?,
@@ -47,8 +49,8 @@ let makeIcon =
     ~props=
       makeProps(
         ~className?,
-        ~color?,
-        ~fontSize?,
+        ~color=?color->map(colorToJs),
+        ~fontSize=?fontSize->map(fontSizeToJs),
         ~nativeColor?,
         ~titleAccess?,
         ~viewBox?,
