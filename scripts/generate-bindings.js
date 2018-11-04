@@ -20,23 +20,17 @@ const groupedIcons = Object.keys(icons).reduce((acc, value) => {
 Object.keys(groupedIcons).map(icon => {
   const variants = groupedIcons[icon];
 
-  const contents = variants
-    .map(
-      ([importName, moduleName]) => `
+  const header = 'open IconProps;\n';
+  const contents = variants.reduce(
+    (c, [importName, moduleName]) => `${c}
 module ${moduleName} = {
   [@bs.module "@material-ui/icons/${importName}"]
   external reactClass : ReasonReact.reactClass = "default";
-  [@bs.obj] external makeProps: (~className: string=?, unit) => _ = "";
-  let make = (~className: option(string)=?, children) =>
-    ReasonReact.wrapJsForReason(
-      ~reactClass,
-      ~props=makeProps(~className?, ()),
-      children,
-    );
+  let make = makeIcon(~reactClass);
 };
 `,
-    )
-    .join('');
+    header,
+  );
 
-  return fs.writeFileSync(`./src/${icon}.re`, contents);
+  return fs.writeFileSync(`./src/icons/${icon}.re`, contents);
 });

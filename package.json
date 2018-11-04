@@ -1,6 +1,6 @@
 {
   "name": "@mscharley/bs-material-ui-icons",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "Reason bindings for material-ui-icons",
   "main": "lib/js/src/MaterialUI.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepack": "yarn run clean",
     "generate-bindings":
-      "rm -f src/*.re && node ./scripts/generate-bindings.js",
+      "rm -f src/icons/*.re && node ./scripts/generate-bindings.js",
     "format:js": "prettier --write ./*.{js,json,md} ./**/*.{js,json,md}",
     "format:reason": "bsrefmt --in-place src/*.re",
     "format": "yarn format:js && yarn format:reason"
