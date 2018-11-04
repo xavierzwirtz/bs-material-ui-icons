@@ -1,0 +1,31 @@
+open IconProps;
+
+module Filled = {
+  [@bs.module "@material-ui/icons/VerticalAlignBottom"]
+  external reactClass: ReasonReact.reactClass = "default";
+  let make = makeIcon(~reactClass);
+};
+
+module Outlined = {
+  [@bs.module "@material-ui/icons/VerticalAlignBottomOutlined"]
+  external reactClass: ReasonReact.reactClass = "default";
+  let make = makeIcon(~reactClass);
+};
+
+module Rounded = {
+  [@bs.module "@material-ui/icons/VerticalAlignBottomRounded"]
+  external reactClass: ReasonReact.reactClass = "default";
+  let make = makeIcon(~reactClass);
+};
+
+module Sharp = {
+  [@bs.module "@material-ui/icons/VerticalAlignBottomSharp"]
+  external reactClass: ReasonReact.reactClass = "default";
+  let make = makeIcon(~reactClass);
+};
+
+module TwoTone = {
+  [@bs.module "@material-ui/icons/VerticalAlignBottomTwoTone"]
+  external reactClass: ReasonReact.reactClass = "default";
+  let make = makeIcon(~reactClass);
+};
