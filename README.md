@@ -48,7 +48,7 @@ Maybe this library hasn't been updated yet to include the new icon. No problems!
 module FancyNewIcon = {
   [@bs.module "@material-ui/icons/FancyNewIcon"]
   external reactClass: ReasonReact.reactClass = "default";
-  let make = MscharleyBsMaterialUiIcons.makeIcon(~reactClass);
+  let make = MscharleyBsMaterialUiIcons.IconProps.makeIcon(~reactClass);
 };
 ```
 
