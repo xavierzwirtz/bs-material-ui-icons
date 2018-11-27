@@ -1,31 +1,26 @@
-open IconProps;
+open Icon;
 
-module Filled = {
+module Filled = Make({
   [@bs.module "@material-ui/icons/BorderOuter"]
   external reactClass: ReasonReact.reactClass = "default";
-  let make = makeIcon(~reactClass);
-};
+});
 
-module Outlined = {
+module Outlined = Make({
   [@bs.module "@material-ui/icons/BorderOuterOutlined"]
   external reactClass: ReasonReact.reactClass = "default";
-  let make = makeIcon(~reactClass);
-};
+});
 
-module Rounded = {
+module Rounded = Make({
   [@bs.module "@material-ui/icons/BorderOuterRounded"]
   external reactClass: ReasonReact.reactClass = "default";
-  let make = makeIcon(~reactClass);
-};
+});
 
-module Sharp = {
+module Sharp = Make({
   [@bs.module "@material-ui/icons/BorderOuterSharp"]
   external reactClass: ReasonReact.reactClass = "default";
-  let make = makeIcon(~reactClass);
-};
+});
 
-module TwoTone = {
+module TwoTone = Make({
   [@bs.module "@material-ui/icons/BorderOuterTwoTone"]
   external reactClass: ReasonReact.reactClass = "default";
-  let make = makeIcon(~reactClass);
-};
+});

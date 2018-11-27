@@ -1,31 +1,26 @@
-open IconProps;
+open Icon;
 
-module Filled = {
+module Filled = Make({
   [@bs.module "@material-ui/icons/DesktopWindows"]
   external reactClass: ReasonReact.reactClass = "default";
-  let make = makeIcon(~reactClass);
-};
+});
 
-module Outlined = {
+module Outlined = Make({
   [@bs.module "@material-ui/icons/DesktopWindowsOutlined"]
   external reactClass: ReasonReact.reactClass = "default";
-  let make = makeIcon(~reactClass);
-};
+});
 
-module Rounded = {
+module Rounded = Make({
   [@bs.module "@material-ui/icons/DesktopWindowsRounded"]
   external reactClass: ReasonReact.reactClass = "default";
-  let make = makeIcon(~reactClass);
-};
+});
 
-module Sharp = {
+module Sharp = Make({
   [@bs.module "@material-ui/icons/DesktopWindowsSharp"]
   external reactClass: ReasonReact.reactClass = "default";
-  let make = makeIcon(~reactClass);
-};
+});
 
-module TwoTone = {
+module TwoTone = Make({
   [@bs.module "@material-ui/icons/DesktopWindowsTwoTone"]
   external reactClass: ReasonReact.reactClass = "default";
-  let make = makeIcon(~reactClass);
-};
+});

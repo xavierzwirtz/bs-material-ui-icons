@@ -1,31 +1,26 @@
-open IconProps;
+open Icon;
 
-module Filled = {
+module Filled = Make({
   [@bs.module "@material-ui/icons/PlayArrow"]
   external reactClass: ReasonReact.reactClass = "default";
-  let make = makeIcon(~reactClass);
-};
+});
 
-module Outlined = {
+module Outlined = Make({
   [@bs.module "@material-ui/icons/PlayArrowOutlined"]
   external reactClass: ReasonReact.reactClass = "default";
-  let make = makeIcon(~reactClass);
-};
+});
 
-module Rounded = {
+module Rounded = Make({
   [@bs.module "@material-ui/icons/PlayArrowRounded"]
   external reactClass: ReasonReact.reactClass = "default";
-  let make = makeIcon(~reactClass);
-};
+});
 
-module Sharp = {
+module Sharp = Make({
   [@bs.module "@material-ui/icons/PlayArrowSharp"]
   external reactClass: ReasonReact.reactClass = "default";
-  let make = makeIcon(~reactClass);
-};
+});
 
-module TwoTone = {
+module TwoTone = Make({
   [@bs.module "@material-ui/icons/PlayArrowTwoTone"]
   external reactClass: ReasonReact.reactClass = "default";
-  let make = makeIcon(~reactClass);
-};
+});

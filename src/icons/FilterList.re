@@ -1,31 +1,26 @@
-open IconProps;
+open Icon;
 
-module Filled = {
+module Filled = Make({
   [@bs.module "@material-ui/icons/FilterList"]
   external reactClass: ReasonReact.reactClass = "default";
-  let make = makeIcon(~reactClass);
-};
+});
 
-module Outlined = {
+module Outlined = Make({
   [@bs.module "@material-ui/icons/FilterListOutlined"]
   external reactClass: ReasonReact.reactClass = "default";
-  let make = makeIcon(~reactClass);
-};
+});
 
-module Rounded = {
+module Rounded = Make({
   [@bs.module "@material-ui/icons/FilterListRounded"]
   external reactClass: ReasonReact.reactClass = "default";
-  let make = makeIcon(~reactClass);
-};
+});
 
-module Sharp = {
+module Sharp = Make({
   [@bs.module "@material-ui/icons/FilterListSharp"]
   external reactClass: ReasonReact.reactClass = "default";
-  let make = makeIcon(~reactClass);
-};
+});
 
-module TwoTone = {
+module TwoTone = Make({
   [@bs.module "@material-ui/icons/FilterListTwoTone"]
   external reactClass: ReasonReact.reactClass = "default";
-  let make = makeIcon(~reactClass);
-};
+});

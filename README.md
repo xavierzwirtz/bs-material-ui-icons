@@ -45,11 +45,10 @@ let make = (_children) => {
 Maybe this library hasn't been updated yet to include the new icon. No problems! You can easily use the same tooling we do to include any new icons you want with only a few lines of code.
 
 ```reason
-module FancyNewIcon = {
+module FancyNewIcon = MscharleyBsMaterialUiIcons.Icon.Make({
   [@bs.module "@material-ui/icons/FancyNewIcon"]
   external reactClass: ReasonReact.reactClass = "default";
-  let make = MscharleyBsMaterialUiIcons.makeIcon(~reactClass);
-};
+});
 ```
 
 Please also let us know that we're missing something in an issue! We'll get things updated as soon as possible.
