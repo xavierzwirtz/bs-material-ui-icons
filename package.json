@@ -8,13 +8,14 @@
     "build": "yarn generate-bindings && bsb -make-world",
     "start": "bsb -make-world -w",
     "clean": "bsb -clean-world",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "exit 0",
     "prepack": "yarn run clean",
     "generate-bindings":
       "rm -f src/icons/*.re && node ./scripts/generate-bindings.js",
     "format:js": "prettier --write ./*.{js,json,md} ./**/*.{js,json,md}",
     "format:reason": "bsrefmt --in-place src/*.re",
-    "format": "yarn format:js && yarn format:reason"
+    "format": "yarn format:js && yarn format:reason",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
@@ -49,7 +50,8 @@
     "prettier": "1.12.1",
     "react": "^16.3.0",
     "react-dom": "^16.3.0",
-    "reason-react": "^0.5.3"
+    "reason-react": "^0.5.3",
+    "semantic-release": "15.13.3"
   },
   "peerDependencies": {
     "@material-ui/core": "^3.1.1",

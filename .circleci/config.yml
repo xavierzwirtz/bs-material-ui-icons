@@ -1,0 +1,33 @@
+version: 2.1
+
+jobs:
+  build:
+    working_directory: ~/bs-material-ui-icons
+    docker:
+      - image: circleci/node:10
+    steps:
+      - checkout
+      - run: yarn install
+      - run: yarn build
+      - run: yarn test
+  deploy:
+    working_directory: ~/bs-material-ui-icons
+    docker:
+      - image: circleci/node:10
+    steps:
+      - checkout
+      - run: yarn install
+      - run: yarn semantic-release
+
+workflows:
+  version: 2
+  ci:
+    jobs:
+      - build
+      - deploy:
+          context: semantic-release
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
