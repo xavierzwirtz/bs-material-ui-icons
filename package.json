@@ -4,7 +4,6 @@
   "description": "Reason bindings for material-ui-icons",
   "main": "lib/js/src/MaterialUI.js",
   "scripts": {
-    "precommit": "lint-staged",
     "build": "yarn generate-bindings && bsb -make-world",
     "start": "bsb -make-world -w",
     "clean": "bsb -clean-world",
@@ -58,6 +57,11 @@
     "@material-ui/core": "^3.1.1",
     "@material-ui/icons": "^3.0.1",
     "reason-react": "^0.7.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
     "*.{js,json}": [
