@@ -17,6 +17,9 @@
 .merlin
 .bsb.lock
 
+# generated files
+/src/icons
+
 # misc
 .DS_Store
 .env.local

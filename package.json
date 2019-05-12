@@ -1,6 +1,6 @@
 {
   "name": "@mscharley/bs-material-ui-icons",
-  "version": "0.6.0",
+  "version": "0.0.0-development",
   "description": "Reason bindings for material-ui-icons",
   "main": "lib/js/src/MaterialUI.js",
   "scripts": {
@@ -9,9 +9,8 @@
     "start": "bsb -make-world -w",
     "clean": "bsb -clean-world",
     "test": "exit 0",
-    "prepack": "yarn run clean",
-    "generate-bindings":
-      "rm -f src/icons/*.re && node ./scripts/generate-bindings.js",
+    "prepack": "yarn run clean && yarn generate-bindings",
+    "generate-bindings": "rm -f src/icons/*.re && node ./scripts/generate-bindings.js",
     "format:js": "prettier --write ./*.{js,json,md} ./**/*.{js,json,md}",
     "format:reason": "bsrefmt --in-place src/*.re",
     "format": "yarn format:js && yarn format:reason",
@@ -34,7 +33,9 @@
     "bucklescript"
   ],
   "author": "Jonathon Kelly <jonathon@insidersbyte.com>",
-  "contributors": ["Matthew Scharley <matt@scharley.me>"],
+  "contributors": [
+    "Matthew Scharley <matt@scharley.me>"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mscharley/bs-material-ui-icons/issues"
@@ -59,7 +60,13 @@
     "reason-react": "^0.7.0"
   },
   "lint-staged": {
-    "*.{js,json}": ["prettier --write", "git add"],
-    "src/*.re": ["bsrefmt --in-place", "git add"]
+    "*.{js,json}": [
+      "prettier --write",
+      "git add"
+    ],
+    "src/*.re": [
+      "bsrefmt --in-place",
+      "git add"
+    ]
   }
 }
