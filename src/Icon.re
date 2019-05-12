@@ -1,5 +1,3 @@
-open Belt.Option;
-
 [@bs.deriving jsConverter]
 type color = [
   | [@bs.as "default"] `Default
